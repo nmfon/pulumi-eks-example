@@ -39,6 +39,7 @@ pulumi destroy --remove -s <environment>  # dev/test/prod
 
 Beyond this very basic example, I would recommend the following:
 
+- configure auth for cluster
 - add public subnets if egress is required (e.g. to pull container images from public registries)
 - add config for a pipeline (e.g. GitHub Actions)
 - store any secrets in a secrets manager (e.g. AWS SSM Parameter Store, AWS Secrets Manager, etc.)
