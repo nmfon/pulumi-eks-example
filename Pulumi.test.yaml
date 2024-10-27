@@ -1,0 +1,17 @@
+config:
+  eks-cluster:region: "ap-southeast-2"
+  eks-cluster:availabilityZones: [
+    "ap-southeast-2a",
+    "ap-southeast-2b",
+    "ap-southeast-2c",
+  ]
+
+  eks-cluster:allowedCidrs: [
+    "1.2.3.4",  # Replace with your actual IP or your company's VPN IP)
+  ]
+
+  eks-cluster:nodeGroupConfigs = [
+    { name: "core", instanceType: "m7i.large", minSize: 1, maxSize: 5, desiredCapacity: 2 },
+    { name: "4xlarge", instanceType: "m7i.4xlarge", minSize: 1, maxSize: 10, desiredCapacity: 2 },
+  ]
+
